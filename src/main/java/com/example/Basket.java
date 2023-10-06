@@ -7,20 +7,24 @@ public class Basket {
     private ArrayList<Fruit> fruits;
 
     public Basket(int capacity) {
-        this.capacity=capacity;
-        this.fruits=new ArrayList<Fruit>();
-
-        public String getFruit();
-            return this.getFruit;
+        this.capacity = capacity;
+        this.fruits = new ArrayList<Fruit>();
         // TODO: Initialize the attributes (and initialize the fruits list)
     }
 
+    public ArrayList<Fruit> getFruits() {
+        return this.fruits;
+    }
+
+    public int getCapacity() {
+        return this.capacity;
+    }
+
     public void addFruit(Fruit fruit) {
-        this.fruits.add(fruit);
-        if(this.fruits.size()<this.capacity){
+        if (this.fruits.size() < this.capacity) {
             this.fruits.add(fruit);
         }
-    
+
         // TODO: Add the fruit to the basket IF THERE IS SPACE!
     }
 
@@ -30,4 +34,12 @@ public class Basket {
     }
 
     // TODO: Implement getters, setters, and any other methods you find necessary
+
+    public void setFruits(ArrayList<Fruit> fruits) {
+        this.fruits = fruits;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
 }
